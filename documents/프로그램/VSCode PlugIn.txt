@@ -1,0 +1,10 @@
+Angular 2, 4 and upcoming latest TypeScript HTML Snippets
+Angular 5 Snippets - TypeScript, Html, ngRx, Angular Flex Layout, Material & Testing
+Angular 6 Snippets
+angular2-inline
+HTML Snippets
+Path Intellisense
+Live Server
+Material Icon Theme
+TypeScript Hero
+
