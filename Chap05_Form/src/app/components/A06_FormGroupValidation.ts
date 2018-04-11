@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormArray, FormArrayName, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-    selector: 'a05Component',
+    selector: 'a06Component',
     template: `
         <div class="panel-heading">
-            <h3>5. Reactive Base Form</h3>
+            <h3>6. Reactive Base Form</h3>
         </div>
 
         <div class="panel-body">
@@ -42,7 +42,7 @@ import { FormGroup, FormControl, FormArray, FormArrayName, FormBuilder, Validato
                         </div>
 
                         <input type="text" class="form-control" formControlName="1">
-                        <div>
+                        <div *ngIf="fg.get('name').get('1').touched || fg.get('name').get('1').dirty">
                             <div [hidden]="!fg.get('name').get('1').hasError('required')">
                                 이름은 필수 항목입니다.
                             </div>
@@ -102,7 +102,7 @@ import { FormGroup, FormControl, FormArray, FormArrayName, FormBuilder, Validato
         </div>
     `
 })
-export class A05Component {
+export class A06Component {
     public ary: string[] = ['Salary', 'Department']
     public dept: string = 'Salary';
     public firstName: string = 'HongGilDong';
@@ -121,7 +121,7 @@ export class A05Component {
             pw: new FormControl('', [Validators.required, Validators.pattern(/[a-zA-Z][\w]+/)]),
             repw: new FormControl(''),
             dept: new FormControl('')
-        })
+        });
     }
 
     public getName(): string {

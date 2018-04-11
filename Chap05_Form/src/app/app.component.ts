@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
       <h1>Form Sample</h1>
     </div>
 
-    <a02Component></a02Component>
+    <a06Component></a06Component>
     
     <!--
+    <a05Component></a05Component>
+    <a04Component></a04Component>
+    <a03Component></a03Component>
+    <a02Component></a02Component>
     <a01Component></a01Component>
     -->
 
