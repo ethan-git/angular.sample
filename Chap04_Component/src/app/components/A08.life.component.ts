@@ -12,7 +12,35 @@ import { Component } from '@angular/core';
 })
 export class A08One {
     private name: string = "A08 One"
+    private age: number = 100;
 
+    constructor(){
+        console.log(`A08 One Constructor => ${this.age}`);
+    }
+    
+    ngOnInit() {
+        console.log(`A08 One ngOnInit => ${this.age}`);
+    }
+
+    ngOnChanges() {
+        console.log(`A08 One ngOnChanges => ${this.age}`);
+    }
+
+    ngAfterContentInit() {
+        console.log(`A08 One ngAfterContentInit => ${this.age}`);
+    }
+
+    ngAfterContentChecked() {
+        console.log(`A08 One ngAfterContentChecked => ${this.age}`);
+    }
+
+    ngAfterViewInit() {
+        console.log(`A08 One ngAfterViewInit => ${this.age}`);
+    }
+
+    ngAfterViewChecked() {
+        console.log(`A08 One ngAfterViewChecked => ${this.age}`);
+    }
 }
 
 @Component({
@@ -25,6 +53,7 @@ export class A08One {
             <input type="string" class="form-control" [(ngModel)]="user.address">
         </div>
         
+        <a08One></a08One>
     `
 })
 export class A08Component {
@@ -38,4 +67,27 @@ export class A08Component {
         console.log(`A08 Parent Constructor => ${this.age}`);
     }
     
+    ngOnInit() {
+        console.log(`A08 Parent ngOnInit => ${this.age}`);
+    }
+
+    ngOnChanges() {
+        console.log(`A08 Parent ngOnChanges => ${this.age}`);
+    }
+
+    ngAfterContentInit() {
+        console.log(`A08 Parent ngAfterContentInit => ${this.age}`);
+    }
+
+    ngAfterContentChecked() {
+        console.log(`A08 Parent ngAfterContentChecked => ${this.age}`);
+    }
+
+    ngAfterViewInit() {
+        console.log(`A08 Parent ngAfterViewInit => ${this.age}`);
+    }
+
+    ngAfterViewChecked() {
+        console.log(`A08 Parent ngAfterViewChecked => ${this.age}`);
+    }
 }

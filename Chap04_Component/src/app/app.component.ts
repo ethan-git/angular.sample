@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
       <h1>Component</h1>
     </div>
 
-    <a04Component></a04Component>
+    <a09Component></a09Component>
 
     <!--
+    <a08Component></a08Component>
+    <a07Component></a07Component>
+    <a06Component></a06Component>
+    <a05Component></a05Component>
+    <a04Component></a04Component>
     <a03Component></a03Component>
     <a02Component></a02Component>
     <a01Component></a01Component>

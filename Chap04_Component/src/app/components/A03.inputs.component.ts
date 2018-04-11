@@ -22,13 +22,13 @@ import { Component, Input } from '@angular/core';
     styles: [`
         div { border: 1px solid blue; padding:10px; margin:10px; width:70%; height:70%; }
     `],
-    inputs: ['normal', 'name', 'ary']
+    // inputs: ['normal', 'name', 'ary']
 })
 export class A03One { 
-    // @Input() normal: string;
-    // @Input() name: string;
+    @Input() normal: string;
+    @Input() name: string;
     @Input('obj') tel: string;
-    // @Input() ary: string[];
+    @Input() ary: string[];
     @Input('company') comp: string;
     @Input('st') _static: string;
 
@@ -99,7 +99,7 @@ export class A03One {
 })
 export class A03Component {
     public name: string = 'HongGilDong';
-    public obj: any = {
+    public obj: {tel: string, address: string} = {
         tel: '010-1234-5678',
         address: 'Seoul'
     }
