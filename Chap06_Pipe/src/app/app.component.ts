@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
       <h1>Pipe & Custom Pipe</h1>
     </div>
 
-    <a02Component></a02Component>
-
+    <a04Component></a04Component>
+    
     <!--
+    <a03Component></a03Component>
+    <a02Component></a02Component>
     <a01Component></a01Component>
     -->
   `,

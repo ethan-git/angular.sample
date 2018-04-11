@@ -58,7 +58,11 @@ import { PercentPipe, DecimalPipe } from '@angular/common';
 
                 <h4>String slice</h4>
                 <div>
-                    
+                    1.slice = {{str | slice}}<br>
+                    2.slice : 5 : 9 = {{str | slice : 5 : 9}}<br>
+                    3.slice : 5 = {{str | slice : 5}}<br>
+                    4.slice : -5 = {{str | slice : -5}}<br>
+                    5.slice : -5 : -2 = {{str | slice : -5 : -2}}<br>
                 </div>
             </div>
         </div>
