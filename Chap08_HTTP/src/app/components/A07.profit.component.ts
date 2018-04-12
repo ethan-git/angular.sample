@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3>
-                    HTTP Service
+                    7.HTTP Service
                     <span class="label label-primary">profit</span>
                 </h3>
             </div>
@@ -63,5 +63,5 @@ import 'rxjs/add/operator/catch';
     providers: []
 })
 export class A07Component  { 
-    
+    // http://70.12.50.190:8080/Angular/profitList
 }
