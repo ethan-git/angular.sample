@@ -42,7 +42,7 @@ import { A04HttpService } from '../service/A04.http.service';
     providers: [A04HttpService]
 })
 export class A04Component {
-    private products: Array<ProductType>;
+    public products: Array<ProductType>;
 
     constructor(private http: A04HttpService) { }
 
