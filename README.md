@@ -4,6 +4,7 @@ Visual Studio Code
 -------------
 
 ### ubuntu apt install
+=======
 
 ```
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
