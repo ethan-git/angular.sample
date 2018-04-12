@@ -30,18 +30,50 @@ export class CountPipe implements PipeTransform {
 
         let result: Array<number> = [];
         for (let item in data) {
-            result.push(Number(item)+ 1);
+            result.push(Number(item) + 1);
         }
         return result;
     }
 }
 
-@Pipe({name: 'search'})
+@Pipe({ name: 'search' })
 export class SearchPipe implements PipeTransform {
-    transform(data: Array<any>, field: string, keyword: string = '', ignore:boolean = false): Array<any> {
-        
+    transform(data: Array<any>, field: string, keyword: string = '', ignore: boolean = true): Array<any> {
+
         let result: Array<any> = [];
 
+        let keys: Array<string>;
+        if (!field) {
+            // {id: 1, name: 'Hong', kor: 90, eng: 71},
+            // ...
+            keys = Object.keys(data[0]);    // [id, name, kor, eng]
+            field = keys[0]
+        }
+
+        if (ignore) {
+            data.forEach((item, index) => {
+                let str: string = item[field].toString();
+                if (str.toUpperCase().indexOf(keyword.toString().toUpperCase()) != -1) {
+                    result.push(item);
+                }
+            });
+        } else {
+            data.forEach((item, index) => {
+                let str: string = item[field].toString();
+                if (str.indexOf(keyword.toString()) != -1) {
+                    result.push(item);
+                }
+            });
+        }
+
         return result;
+    }
+}
+
+@Pipe({name: 'fieldNamePipe'})
+export class FieldNamePipe implements PipeTransform {
+    transform(data: Array<any>): Array<string> {
+        let keys: Array<string> = Object.keys(data[0]);
+        return keys;
     }
 }

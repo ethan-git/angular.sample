@@ -9,12 +9,12 @@ import { A02Component } from './components/A02.pipe.component';
 import { A03Component } from './components/A03.pipe.component';
 import { A04Component } from './components/A04.custom.component';
 import { UpDownPipe, ReplacePipe, AbbrPipe } from './pipe/custom.pipe';
-import { LimitToPipe, CountPipe, SearchPipe } from './pipe/list.pipe';
+import { LimitToPipe, CountPipe, SearchPipe, FieldNamePipe } from './pipe/list.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, A01Component, A02Component, A03Component, A04Component, 
-    UpDownPipe, ReplacePipe, AbbrPipe, LimitToPipe, CountPipe, SearchPipe
+    UpDownPipe, ReplacePipe, AbbrPipe, LimitToPipe, CountPipe, SearchPipe, FieldNamePipe
   ],
   imports: [
     BrowserModule, FormsModule

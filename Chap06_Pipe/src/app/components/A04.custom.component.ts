@@ -64,13 +64,13 @@ import { UpDownPipe } from '../pipe/custom.pipe';
                 <h4>Search</h4>
                 <div>
                     Field: 
-                        <select class="form-control">
-                            <option *ngFor="let item of obj">{{item.name}}</option>
+                        <select class="form-control" [(ngModel)]="fieldName">
+                            <option *ngFor="let item of obj | fieldNamePipe">{{item}}</option>
                         </select>
 
-                    Keyword: <input type="text" class="form-control"><br>
+                    Keyword: <input type="text" class="form-control" [(ngModel)]="keyName"><br>
 
-                    <label><input type="checkbox"> 대소문자 무시</label>
+                    <label><input type="checkbox" [(ngModel)]="ignoreCase"> 대소문자 무시</label>
                     <table class="table">
                         <tr>
                             <th>ID</th>
@@ -78,11 +78,11 @@ import { UpDownPipe } from '../pipe/custom.pipe';
                             <th>KOR</th>
                             <th>ENG</th>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let item of obj | search : fieldName : keyName : ignoreCase">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.kor}}</td>
+                            <td>{{item.eng}}</td>
                         </tr>
                     </table>
                 </div>
@@ -96,7 +96,8 @@ export class A04Component{
     public str: string = '동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세';
     
     public displayNum: number = 3;
-    public keyName: string = 'name';
+    public keyName: string = '';
+    public fieldName;
     public ignoreCase: boolean = false;
 
     public obj: Array<any> = [
