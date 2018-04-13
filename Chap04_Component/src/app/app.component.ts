@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
     </div>
 
     <a09Component></a09Component>
-
-    <!--
     <a08Component></a08Component>
     <a07Component></a07Component>
     <a06Component></a06Component>
@@ -19,7 +17,7 @@ import { Component } from '@angular/core';
     <a02Component></a02Component>
     <a01Component></a01Component>
     <a01Child></a01Child>
-    -->
+
   `,
   styleUrls: ['./app.component.css']
 })

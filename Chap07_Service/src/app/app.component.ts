@@ -11,12 +11,7 @@ import { Component } from '@angular/core';
     <a03Component></a03Component>
     <a02Component></a02Component>
     <a01Component></a01Component>
-    <!--
-    <a04Component></a04Component>
-    <a03Component></a03Component>
-    <a02Component></a02Component>
-    <a01Component></a01Component>
-    -->
+
   `,
   styleUrls: ['./app.component.css']
 })
