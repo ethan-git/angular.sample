@@ -13,12 +13,22 @@ import { ActivatedRoute } from '@angular/router';
         </div>
     `
 })
-export class ProductArgsComponent{
+export class ProductArgsComponent {
     public age: string;
     public isProd: boolean;
     public name: string;
 
-    constructor(public ac: ActivatedRoute){}
+    constructor(public ac: ActivatedRoute) { }
+
+    ngOnInit() {
+        this.age = this.ac.snapshot.queryParams['age'];
+
+        this.ac.queryParams.subscribe(
+            (data: any) => {
+                this.isProd = data['isProd'];
+                this.name = data['name'];
+            })
+    }
 }
 
 

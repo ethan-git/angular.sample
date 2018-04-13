@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
     `
 })
 export class LuxuryLazyComponent{
-    
+    constructor(){
+        console.log('lazy..LuxuryLazyComponent');
+    }
 }
