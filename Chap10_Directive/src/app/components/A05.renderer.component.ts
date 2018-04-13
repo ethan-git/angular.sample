@@ -67,11 +67,13 @@ export class A05OneDirective {
     selector: 'a05Component',
     template: `
         <div class="panel panel-default">
-
-            <div class="panel panel-body">
-               <div a05OneDir>Inner Content</div>
-               <button id="outBtn">OUT</button>
-            </div>
+        <div class="panel panel-heading">
+          <h3>5.Directive</h3>
+        </div>
+        <div class="panel panel-body">
+            <div a05OneDir>Inner Content</div>
+            <button id="outBtn">OUT</button>
+        </div>
         </div>
     `
 })

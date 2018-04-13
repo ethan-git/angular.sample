@@ -26,7 +26,7 @@ export class A06OneDirective {
 
         // 배열의 지정 순서에 따라 지정한 순서로 배치가 된다. 기준이 있어야 함
         // 기준 안쪽에서 정렬이 된다.
-        //this.render.projectNodes(this.elem, [div2, btn, div1]);
+        // this.render.projectNodes(this.elem, [div2, btn, div1]);
 
         // 재 배치가 되면 자식 요소가 아닌 형제 요소로 배치되게 된다.
         // 따라서 CSS가 적용 안됨
@@ -61,8 +61,8 @@ export class A06OneDirective {
     template: `
         <div class="panel panel-default">
             <div class="panel panel-heading">
-                <h3 id="first">Directive</h3>
-                <h3 id="second">ABC</h3>
+                <h3 id="first">6.Directive</h3>
+                <h3 id="second">Second</h3>
             </div>
 
             <div class="panel panel-body">
